@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "facial-recognition-app"
+version = "0.1.0"
+description = "Facial Recognition App with Python Backend and JS Frontend"
+authors = ["Serg Masis <smasis@hawk.iit.edu>"]
+license = "MIT License"
+packages = [{include = "facial_recognition_api"}]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0.0"
+numpy = "^1.26.1"
+opencv-python = "^4.8.1.78"
+dlib = "^19.24.2"
+mediapipe = "^0.10.7"
+faiss-cpu = "^1.7.4"
+
+[tool.poetry.dev-dependencies]
+coverage = {extras = ["toml"], version = "7.2.*"}
+black = {version = "23.1.*", allow-prereleases = true}
+pytest = "^7.4.3"
+pytest-html = "^4.0.2"
+pytest-cov = "^4.1.0"
+pylint = "^3.0.2"
+mkdocs = "^1.5.3"
+mkdocstrings = {extras = ["python"], version = "^0.23"}
+mkdocs-material = "^9.4"
+python-decouple = "^3.8"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
