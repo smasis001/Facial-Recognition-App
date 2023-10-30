@@ -4,14 +4,14 @@ version = "0.1.0"
 description = "Facial Recognition App with Python Backend and JS Frontend"
 authors = ["Serg Masis <smasis@hawk.iit.edu>"]
 license = "MIT License"
-packages = [{include = "facial_recognition_api"}]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<4.0.0"
+python = ">=3.9,<3.13"
 numpy = "^1.26.1"
 opencv-python = "^4.8.1.78"
-dlib = "^19.24.2"
+cmake = "^3.27.7"
+dlib = "19.24.2"
 mediapipe = "^0.10.7"
 faiss-cpu = "^1.7.4"
 
