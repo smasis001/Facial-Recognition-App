@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=latest
+ARG PYTHON_VERSION=3.9
 
 FROM python:${PYTHON_VERSION}-slim-buster AS builder
 
@@ -28,3 +28,7 @@ COPY --from=builder /app/dist .
 RUN . /venv/bin/activate && pip install *.whl && \
     rm -f *.whl && \
     rm -f *.tar.gz
+
+EXPOSE 80
+
+CMD ["python", "webapp/app.py"]
