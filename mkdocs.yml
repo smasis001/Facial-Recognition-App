@@ -1,1 +1,16 @@
-site_name: My Docs
+site_name: Documentation to Facial Recognition App
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - Facial Recognition App Docs: index.md
+  - Reference:
+    - Utils: reference/utils.md
+    - Detect: reference/detect.md
+    - Align: reference/align.md
+    - Represent: reference/represent.md
+    - Identify: reference/identify.md

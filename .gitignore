@@ -128,8 +128,6 @@ celerybeat.pid
 .env
 .vscode
 .venv
-.venv2
-.venv3
 env/
 venv/
 ENV/
@@ -187,9 +185,11 @@ docs/docs/python/functions.txt
 docs/docs/python/constants.txt
 **/.vscode
 **/.venv
-**/.venv2
-**/.venv3
 **/venv
-**/venv2
-**/venv3
+data/raw/**
+data/processed/**
 
+.DS_store
+**/.DS_store
+data/vectordb/faces_ip.pkl
+data/vectordb/faces_ip.faiss

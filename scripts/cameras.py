@@ -1,3 +1,5 @@
+"""Camera Testing Script"""
+# pylint: disable=E1101
 import cv2
 
 def test_camera(index):
@@ -27,6 +29,7 @@ def release_all_cameras(max_cameras_to_check=10):
         cap.release()
 
 def main():
+    """Loop through all cameras"""
     release_all_cameras(10)
     total_cameras = test_all_cameras()
     #release_all_cameras(total_cameras)
@@ -59,7 +62,8 @@ def main():
                 print("Next Camera: ",(current_camera_id + 1) % total_cameras)
                 current_camera_id = (current_camera_id + 1) % total_cameras
                 cap = cv2.VideoCapture(current_camera_id)
-            elif key in [ord("a"), ord("l"), 81, 84, 2, 1]:  # 'a' or 'l' or Left arrow or Down arrow
+            elif key in [ord("a"), ord("l"), 81, 84, 2, 1]:
+                # 'a' or 'l' or Left arrow or Down arrow
                 cap.release()
                 print("Previous Camera: ",(current_camera_id - 1) % total_cameras)
                 current_camera_id = (current_camera_id - 1) % total_cameras
