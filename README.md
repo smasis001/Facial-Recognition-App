@@ -55,7 +55,7 @@ brew install python git
 **Linux**:
 
 ```sh
-sudo apt install python3 git
+sudo apt install python3 python-is-python3 git
 ```
 
 It is recommended that you open the folder where this repository will be cloned with an IDE like VSCode or PyCharm.

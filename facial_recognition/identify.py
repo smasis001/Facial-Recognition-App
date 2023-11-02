@@ -90,3 +90,16 @@ class FaceIdentification:
         key_cnt = len(self.vectorkeys)
         names = [self.get_name(i) for i in range(key_cnt)]
         return len([n for n in names if n == name])
+
+    def reload_vectordb(self) -> None:
+        """Reloads the vector database.
+
+        This function reads the vector database from the specified path and updates the `vectordb`
+        attribute of the object. It also loads the vector keys from the specified path and updates
+        the `vectorkeys` attribute.
+
+        Returns:
+            None
+        """
+        self.vectordb = faiss.read_index(VECTOR_DB_PATH)
+        self.vectorkeys = joblib.load(VECTOR_KEYS_PATH)

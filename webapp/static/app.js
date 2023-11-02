@@ -112,7 +112,7 @@ function identify(imgDataURL, landmarks, boundingbox){
         landmarks: landmarks,
         name:nameProvided
     };
-    fetch('/identify', {
+    fetch('/identify/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

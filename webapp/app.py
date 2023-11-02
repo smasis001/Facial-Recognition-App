@@ -99,6 +99,7 @@ async def identify(
         if name_cnt < 10:
             face_descriptor.add_to_vectordb(np.array(descriptors),\
                                             ids=[packet.name])
+            face_identifier.reload_vectordb()
             return {
                 "message":f"Added `{packet.name}` to the Vector DB"
             }
